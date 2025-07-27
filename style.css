@@ -1,19 +1,10 @@
 body {
+    background-image: url(img/FondoLibros.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     font-family: 'Montserrat';
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: -20px;
-    left: -20px;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    background-image: url(img/FondoLibros.jpg);
-    background-size: cover;
-    filter: blur(5px) brightness(0.5);
-    z-index: -1;
 }
 
 header {
@@ -129,6 +120,10 @@ header h1 {
     background-color: #c7dfc7;
     box-shadow: 0 0 5px 0 #000;
     font-size: 1rem;
+}
+
+.doubt_form textarea {
+    resize: none;
 }
 
 .doubt_form label {
