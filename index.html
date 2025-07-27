@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mundos de papel</title>
+    <!-- Fuente 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<!-- fuente 2 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Mundos de papel</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="about">
+            <div class="text">
+                <h2>Sobre nosotros</h2>
+                    <p>
+                        Mundos del Papel es una comunidad literaria creada con el corazón y pensada para todos los amantes de las historias: quienes las leen, quienes las escriben y quienes las quieren compartir con el mundo.
+                    </p>
+
+                    <p>
+                        Aquí nos reunimos personas con la misma pasión por los libros y la escritura, organizados en tres grupos principales que hacen posible que esta comunidad crezca día a día:
+                    </p>
+                    <p>
+                        El grupo de escritores, donde puedes compartir tus textos, pedir consejos, combatir el bloqueo creativo o recibir opiniones sinceras. Además, contamos con servicios totalmente gratuitos como diseñadoras de portadas, lectores beta, ilustradores, personas que saben de marketing y más—todo con el objetivo de ayudarte a dar vida a tus proyectos.
+                    </p>
+                    <p>
+                        El grupo de lectores, pensado para compartir lecturas, hacer críticas constructivas, debatir sobre libros, personajes, géneros o tropes literarios, y descubrir juntos nuevas joyas escondidas en el mundo de las letras.
+                    </p>
+                    <p>
+                        El grupo de promoción, donde puedes difundir tus historias, compartir enlaces de tus obras, y dar visibilidad a tus perfiles de BookTok, Bookstagram y otras plataformas.
+                    </p>
+                    <p>
+                        Además, el equipo de administradores trabaja constantemente en nuevas dinámicas, concursos y actividades para mantener viva la chispa creativa y fomentar la participación. Queremos que cada persona que entre a Mundos del Papel sienta que ha encontrado un lugar donde crecer, expresarse y conectar con otros que también aman el poder de las palabras.
+                    </p>
+            </div>         
+            <img src="img/LogoComunidad.jpg" alt='Imagen del logo "Mundos de papel"'>
+        </div>
+        <a href="https://chat.whatsapp.com/C9Cqj8JTr5k7mYntMLC0lU" target="_blank" class="join_link">
+            ¡Únete a nosotros!
+        </a>
+    </main>
+    
+    <section class="dudas">
+
+        <h2>¿Tienes dudas o sugerencias?</h2>
+        <p>Contacta con un administrador para que podamos ayudarte, ten en cuenta que la velocidad de respuesta depende de los mismos. ¡Se paciente!</p>
+
+    <form class="doubt_form" method="post" action="https://formspree.io/f/xanbeapk">
+        <label for="tipo">¿Qué quieres comentarnos?</label>
+        <select name="tipo" id="tipo" aria-label="Tipo de mensaje">
+            <option value="duda">Duda</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="user_name" placeholder="tu nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="user_email" placeholder="usuario@gmail.com" required>
+        
+        <label for="text">Tu comentario</label>
+        <textarea rows="8" name="user_doubt" id="text" placeholder="¿Qué deseas decirnos?" required></textarea>
+        
+        <button type="submit">¡Enviar!</button>
+    </form>
+    </section>
+
+    <footer class="footer_content">
+        <a href="https://www.tiktok.com/@worldsofpaper?_t=ZM-8yJRykY07Ow&_r=1" target="_blank">
+            <img src="img/Logo_TikTok.png" alt='Logo de TikTok'>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
