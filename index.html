@@ -49,7 +49,19 @@
             ¡Únete a nosotros!
         </a>
     </main>
-    
+    <!-- Sección de cometarios -->
+    <section class="comments-section">
+        <h2>Escucha los comentarios de la comunidad</h2>
+        <p>¡Tambien puedes dejar tu trocito de arena a la comunidad dejando un bonito mensaje también! </p>
+        <form id="comment-form">
+            <input type="text" name="name" placeholder="Tu nombre">
+            <textarea name="comment" placeholder="Déja tu comentario!" id="comment" required></textarea>
+            <button type="submit">Publicar</button>
+        </form>
+        <!-- Aquí se mostrarán los comentarios -->
+         <div id="comments-container"></div>
+    </section>
+
     <section class="dudas">
 
         <h2>¿Tienes dudas o sugerencias?</h2>
@@ -82,6 +94,27 @@
         </a>
     </footer>
 
-    <script src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBoBxL7IpRXAi83a8Z7xaM8s99AvmbgbQs",
+    authDomain: "webmundosdepapel.firebaseapp.com",
+    projectId: "webmundosdepapel",
+    storageBucket: "webmundosdepapel.firebasestorage.app",
+    messagingSenderId: "922027137215",
+    appId: "1:922027137215:web:0282993fdb6440229f0e0a",
+    measurementId: "G-CTB7HF2VC6"
+  };
+
+  // Inicializar Firebase 
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script src="app.js"></script>
+
 </body>
 </html>
