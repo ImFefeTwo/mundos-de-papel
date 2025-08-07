@@ -99,6 +99,8 @@ header h1 {
     text-align: center;
 }
 
+
+
 #comment-form {
     display: flex;
     flex-direction: column;
@@ -121,11 +123,20 @@ header h1 {
 
 #comment-form button {
     width: 40%;
-    margin: 0 auto;
+    margin: 12px auto;
     padding: 20px;
+    cursor: pointer;
 }
 
-/* Comentarios de base de datos */
+#comment-form .comment-button {
+    border: none;
+    border-radius: 3px;
+    margin: 10px auto;
+    background-color: #c7dfc7;
+    color: #000;
+}
+
+/* Comentarios de firebase */
 #comments-container {
     display: flex;
     flex-direction: row;
@@ -257,5 +268,34 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
     .doubt_form {
         max-width: 500px;
+    }
+}
+
+/* Mejora de comentarios en móvil */
+@media (max-width: 600px) {
+    #comments-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 15px;
+        align-items: stretch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .comment-box {
+        min-width: 220px;
+        max-width: 80vh;
+        height: 160px;
+        margin: 0;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        font-size: 0.98rem;
+    }
+
+    #comment-form {
+        width: 80%;
+        max-width: 98vh;
+        padding: 12px;
     }
 }
