@@ -3,6 +3,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     font-family: 'Montserrat';
 }
@@ -55,6 +56,11 @@ header h1 {
     border-radius: 50px;
     box-shadow: 0 0 30px  #000;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.about img:hover {
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -74,12 +80,13 @@ header h1 {
     color: #fff;
     text-decoration: none;
     font-size: 1.3rem;
-    transition: background-color 0.3s ease;
+    transition: background-color, transform 0.3s ease;
 }
 
 .join_link:hover {
     background-color: #c7dfc7;
     color: #000;
+    transform: scale(1.1);
 }
 
 .comments-section h2 {
@@ -91,10 +98,13 @@ header h1 {
 
 .comments-section p {
     font-size: 1.2rem;
+    width: 90%;
+    margin: 30px auto;
 }
 
 .comments-section {
     background-color: #c7dfc7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23849484' fill-opacity='0.23' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
     width: 100%;
     text-align: center;
 }
@@ -104,21 +114,26 @@ header h1 {
 #comment-form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 500px;
     background-color: #849484;
     border-radius: 10px;
-    margin: auto;
+    margin: 30px auto;
     gap: 12px;
     padding: 20px;
+    box-shadow: 10px 10px 30px #586458, -10px -10px 30px #c7dfc7;
 }
 
 #comment-form input,
 #comment-form textarea {
     border: none;
+    border-radius: 10px;
     padding: 12px;
     margin: 0;
     background-color: #c7dfc7;
-    border-radius: 5px;
+}
+
+#comment-form textarea {
+    resize: none;
 }
 
 #comment-form button {
@@ -126,6 +141,11 @@ header h1 {
     margin: 12px auto;
     padding: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#comment-form button:hover {
+    transform: scale(1.1);
 }
 
 #comment-form .comment-button {
@@ -146,9 +166,20 @@ header h1 {
     padding: 20px;
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .comment-box {
     color: #eee;
-    box-shadow: 0 0 10px 0 #000;
+    box-shadow: 5px 5px 20px #586458, -5px -5px 20px #c7dfc7;
     border-radius: 8px;
     padding: 12px;
     background-color: #849484;
@@ -158,6 +189,12 @@ header h1 {
     word-wrap: break-word;
     margin: 10px auto;
     overflow-y: auto;
+    animation: fadeInUp 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.comment-box:hover {
+    transform: translateY(-20px);
 }
 
 
@@ -165,7 +202,7 @@ header h1 {
     padding: 20px;
     margin: 0;
     background-color: #849484;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23c7dfc7' fill-opacity='0.11' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23c7dfc7' fill-opacity='0.11' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .dudas h2 {
@@ -187,7 +224,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     gap: 1rem;
     padding: 2rem;
     margin: 40px auto;
-    max-width: 300px;
+    max-width: 30%;
     border-radius: 30px;
 }
 
@@ -198,6 +235,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-color: #c7dfc7;
     box-shadow: 0 0 5px 0 #000;
     font-size: 1rem;
+}
+
+.doubt_form input, #text, select {
+    background-color: #c7dfc7;
+    box-shadow: 5px 5px 10px #849484, -5px -5px 10px #586458;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
 }
 
 .doubt_form textarea {
@@ -221,11 +266,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color, transform 0.3s ease;
 }
 
 .doubt_form button:hover {
     background-color: #ddf1dd;
+    transform: scale(1.1);
 }
 
 .footer_content {

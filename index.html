@@ -52,10 +52,10 @@
     <!-- Sección de cometarios -->
     <section class="comments-section">
         <h2>Escucha los comentarios de la comunidad</h2>
-        <p>¡Tambien puedes dejar tu trocito de arena a la comunidad dejando un bonito mensaje también! </p>
+        <p>¿Te gustaría saber qué opinan algunos miembros que ya forman parte antes de entrar? ¡También puedes comentarnos tu opinión sobre la comunidad si ya formas parte de ella! ¿Te gusta? ¿Te sientes cómodo/a y acogido/a? ¡Queremos saberlo todo!</p>
         <form id="comment-form">
             <input type="text" name="name" placeholder="Tu nombre">
-            <textarea name="comment" placeholder="Déja tu comentario!" id="comment" required></textarea>
+            <textarea rows="8" name="comment" placeholder="Déja tu comentario!" id="comment" maxlength="650" required></textarea>
             <button class="comment-button" type="submit">Publicar</button>
         </form>
         <!-- Mostrarlos -->
@@ -114,7 +114,8 @@
   const db = firebase.firestore();
 </script>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
+<script src="dom.js" defer></script>
 
 </body>
 </html>
